@@ -1,7 +1,7 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import styled from "styled-components";
-import { Restart } from "components/Restart";
+import React from "react"
+import { useSelector } from "react-redux"
+import styled from "styled-components"
+import { Restart } from "components/Restart"
 
 export const Summary = () => {
   const quizOver = useSelector(state => state.quiz.quizOver);
@@ -35,10 +35,10 @@ export const Summary = () => {
                       ✔️
                     </span>
                   ) : (
-                    <span role="img" aria-label="wrong">
-                      ❌
+                      <span role="img" aria-label="wrong">
+                        ❌
                     </span>
-                  )}
+                    )}
                 </ResultRow>
               </ListItems>
             ))}
@@ -50,15 +50,15 @@ export const Summary = () => {
         </SummaryWrapper>
       </Wrapper>
     )
-  );
-};
+  )
+}
 
 const Wrapper = styled.section`
   background: #381427;
   min-height: 100vh;
   display: flex;
   align-items: center;
-`;
+`
 const SummaryWrapper = styled.div`
   display: flex;
   color: #e5e5e5;
@@ -67,11 +67,15 @@ const SummaryWrapper = styled.div`
   align-items: center;
   border: 5px solid #e5e5e5
   border-radius: 15px;
-  width: 300px;
+  width: 70%;
   margin: auto;
   background: #223127;
   padding: 15px;
-`;
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+`
 const List = styled.div``;
 const SummaryHeader = styled.h1`
   font-family: "Roboto", sans-serif;
@@ -80,34 +84,37 @@ const SummaryHeader = styled.h1`
   margin-top: 0px;
   text-align: center;
   text-transform: uppercase;
+
   @media (min-width: 768px) {
     font-size: 26px;
   }
-`;
+`
 const ListItems = styled.div`
   display: flex;
   justify-content: space-between;
+
   &:first-child {
     text-transform: uppercase;
     font-weight: 700;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 5px;
   }
+
   &:last-child {
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 5px;
   }
-`;
+`
 const AnswerRow = styled.div`
   display: flex;
   margin-right: 50px;
   margin-top: 10px;
-`;
+`
 const ResultRow = styled.div`
   display: flex;
   margin-top: 10px;
-`;
+`
 const QuizResult = styled.p`
   font-weight: 700;
   margin: 30px 0px 30px 0px;
-`;
+`

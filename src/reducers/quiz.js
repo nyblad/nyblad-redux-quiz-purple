@@ -6,7 +6,7 @@ const questions = [
   { id: 2, questionText: 'A popular musical band of the 1970s was called:', image: './assets/band.jpg', options: ['Deep Purple', 'Purple Jones', 'Purple People Eaters', 'Johnson Purple'], correctAnswerIndex: 0 },
   { id: 3, questionText: 'Which of the following gemstones is known for its purple appearance?', image: './assets/gemstone.jpg', options: ['Opal', 'Emerald', 'Amethyst', 'Onyx'], correctAnswerIndex: 2 },
   { id: 4, questionText: 'Which Cluedo character is purple?', image: './assets/cluedo.jpg', options: ['The Old lady', 'The Colonel', 'The Professor', 'The Actress'], correctAnswerIndex: 2 },
-  { id: 5, questionText: 'In 2002, a vote was held by the manufacturers of M&Ms to decide on which of three new colours was the most popular. The first was purple, the other two were:', image: './assets/mm.jpg', options: ['Aqua and Pink', 'Lemon and Rust', 'Tangerine and Almond', 'Apple and Grey'], correctAnswerIndex: 0 },
+  { id: 5, questionText: 'In 2002, which of three new M&M colors was the most popular. The first was purple, the other two were:', image: './assets/mm.jpg', options: ['Aqua and Pink', 'Lemon and Rust', 'Tangerine and Almond', 'Apple and Grey'], correctAnswerIndex: 0 },
   { id: 6, questionText: 'Which one of these HEX-codes is purple?', image: './assets/hexcolors.jpg', options: ['#95F252', '#6A0DAD', '#5D5D5D', '#CC3300'], correctAnswerIndex: 1 }
 ]
 

@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components/macro";
-import { quiz } from "reducers/quiz";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react"
+import styled from "styled-components/macro"
+import { quiz } from "reducers/quiz"
+import { useSelector, useDispatch } from "react-redux"
 
 export const Options = () => {
   const question = useSelector(
     state => state.quiz.questions[state.quiz.currentQuestionIndex]
-  );
-  const currentIndex = useSelector(state => state.quiz.currentQuestionIndex);
+  )
+  const currentIndex = useSelector(state => state.quiz.currentQuestionIndex)
   const currentAnswer = useSelector(state =>
     state.quiz.answers.find(a => a.questionId === question.id)
-  );
+  )
   const answers = useSelector(state => state.quiz.answers);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   return (
     <StyledOptions>
@@ -43,25 +43,25 @@ export const Options = () => {
           >
             {option}
           </Button>
-        );
+        )
       })}
     </StyledOptions>
-  );
-};
+  )
+}
 
 const StyledOptions = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin: 2rem 5rem;
+  width: 90%;
+  margin: 1rem 0rem;
 
-  @media screen and (min-width: 869px) {
-    width: 60%;
+  @media screen and (min-width: 768px) {
+    width: 70%;
     flex-direction: row;
     justify-content: center;
+    margin: 2rem 0rem;
   }
-`;
-
+`
 const Button = styled.button`
   background-color: ${props => (props.correctOption ? "green" : "#c4a748")};
   color: #e5e5e5;
@@ -70,12 +70,15 @@ const Button = styled.button`
   font-weight: bold;
   padding: 10px;
   margin: 5px;
+  width: 100%;
+  font-size: 15px;
 
   &:hover {
     opacity: 0.7;
   }
+  
   &:disabled {
     opacity: ${props => (props.correctOption ? 1 : 0.6)};
     background: ${props => (props.selected ? "#ff0000" : "")};
   }
-`;
+`

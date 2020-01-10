@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { useSelector, useDispatch } from "react-redux";
-import { quiz } from "reducers/quiz";
-import { Progress } from "components/Progress";
-import { Options } from "components/Options";
+import React from "react"
+import styled from "styled-components"
+import { useSelector, useDispatch } from "react-redux"
+import { quiz } from "reducers/quiz"
+import { Progress } from "components/Progress"
+import { Options } from "components/Options"
 
 export const CurrentQuestion = () => {
   // const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
@@ -38,8 +38,8 @@ export const CurrentQuestion = () => {
         <Progress />
       </Wrapper>
     )
-  );
-};
+  )
+}
 
 const Wrapper = styled.section`
   box-sizing: border-box;
@@ -52,35 +52,37 @@ const Wrapper = styled.section`
   background: #381427;
   min-height: 100vh;
   padding: 10px;
-`;
+`
 const QuestionWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
   @media (min-width: 768px) {
-    width: 65%;
+    width: 70%;
   }
-`;
+`
 const Question = styled.h1`
   font-family: "Roboto", sans-serif;
   color: #e5e5e5;
   font-size: 18px;
   text-align: center;
+
   @media (min-width: 768px) {
     font-size: 22px;
   }
-`;
+`
 const Image = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 5px solid #e5e5e5;
   @media (min-width: 768px) {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
   }
-`;
+`
 const NextButton = styled.button`
   background: transparent;
   color: #e5e5e5;
@@ -88,8 +90,9 @@ const NextButton = styled.button`
   padding: 15px;
   border-radius: 20px;
   text-transform: uppercase;
+
   &:hover {
     background: #5d2242;
     cursor: pointer;
   }
-`;
+`
