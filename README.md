@@ -15,9 +15,9 @@ https://nyblad-redux-quiz.netlify.com/
 * Practice working in different branches and merge
 
 ## Technologies used
-React <br>
-Redux <br>
-Styled components <br>
+* React <br>
+* Redux <br>
+* Styled components <br>
 
 <br>
 Sofie Nyblad & Team Purple 2020
